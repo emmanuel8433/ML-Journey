@@ -7,7 +7,7 @@ height = float(input("Enter you height in meters:"))
 
 weight = float (weight)
 
-ibm = weight / (height*height)
-print(ibm)
+BIM = weight / (height*height)
+print(BIM)
 
 
