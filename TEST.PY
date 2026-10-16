@@ -104,27 +104,249 @@
        #TRANSACTION
        
        
-def withdraw_Money(Account_balnce,withdraw_ammount):
-    if Account_balance <=0:
-        return"invalid withdraw"
-    
-    elif withdraw_Amount > Account_balance  :
-        return"insufficent fund"     
-    
-    else:
-        remaning_balance = Account_balance - withdraw_Amount
-        return" remaining_balance"
-    
-              
-Account_balance = int(input("Enter Account Blance"))       
-withdraw_Amount = int(input("Enter withdraw Amount"))
 
-result = withdraw_Amount(Account_balance,withdraw_Amount)
-print(result)
+
+
+#
+# list and tuple
+"""
+courses = ["biology","chemistry","problem-solving","web-tech"]
+print(courses)
+print(courses[1])
+courses.append("csc")
+courses.remove("problem-solving")
+print(courses)
+
+print("\n=============================================")
+print("       STUDENT TUPLE                           ")
+print("\n=============================================")
+student_profile = ("emmanuel","19","computer-science")
+print(student_profile[2])
+print(student_profile[-1])
+
+"""
+
+
+"""
+courses = ["chemistry","biology","english","maths","advance-maths"]
+print(courses)
+print(courses[0])
+print(courses[2])
+print(courses[1]) == "cos"
+courses.append("algebra")
+courses.remove("maths")
+print(courses)
+
+profile = ("emmanuel","27","DI")
+print(profile[0])
+print(profile[2])
+print(profile[-3])
+print(profile)
+"""
+
+
+
+#DICTIONARIES
+"""
+student = {
+    "name": "emmanuel",
+    "age": 50,
+    "department": "computer-science",
+    "level": 200
+}
+
+print(student)
+
+print(student["name"])
+print(student["department"])
+
+student["level"] = 500
+
+student["school"] = "Rivers State University"
+
+print(student)
+"""
+
+
+"""
+print("\n=========================================")
+print("          STUDENT PROFILE MANAGER          ")
+print("\n=========================================")
+
+profile = {
+  
+    "name" : "emmanuel",
+    "age" : 89,
+    "course" : "algebra",
+    "level" : 500,
+    "school" : "RSU",
+}
+print(profile)
+profile["name"]
+profile["course"]
+profile["level"] = 700
+profile["course"] = "english"
+profile["country"] = "nigeral"
+
+print(profile)
+print(profile["country"])
+
+student = {
+    "name": "Emmanuel",
+    "age": 19,
+    "course": "Computer Science",
+    "level": 200
+}
+
+print("Keys:", student.keys())
+print("Values:", student.values())
+print("Items:", student.items())
+
+print("course" in student)
+
+student.pop("age")
+
+print(student)
+
+
+
+
+language = {"python","java","c++","python","javascript","c++"}
+print(language)
+
+language.add("html")
+language.remove("java")
+print(language)
+print(language[0])
+"""
+
+"""
+name = "emmanuel"
+
+print(name.upper())
+
+print(name.islower())
+
+print(name[0])
+
+print(name[7])
+
+print(name.replace("emmanuel" , "ella"))
+
+
+phrase = "python is easy to learn"
+
+print(phrase.split())
+
+
+
+
+phrase = "python is easy to   learn"
+
+print(phrase.split())
+print(phrase.strip())
+print(phrase)
+
+
+
+
+name = "emmanuel"
+age = 67
+time = 34
+
+print(f"my name is,{name},i am {age},i leave on{time} street")
+
+numbers = [2,5,8,11,14,17,20]
+
+new_numbers = (numbers % 2 ==0 for number in numbers)
+print(new_numbers)
+
+"""
+
+
+
+
+
+
+
+
+
+        # TXT FILE
+
+"""
+name = "emmanuel"
+course = "digital electronic"
+
+with open ("student.txt", "w") as file:
+    file.write(f"my name is{name},\n")
+    file.write(f"and i studied,{course}")
     
+with open ("student.txt","r") as file:
+    content = file.read()
+    print(content)
+    """
     
+              #CSV FILE
+              # 
+"""              
+import csv
+
+with open ("student.csv", "w" ,newline="") as file:
+    writer = csv.writer(file)
     
+    writer.writerow(["NAME","AGE","COURSE"])
+    writer.writerow(["emmanuel,19,python"])
+    writer.writerow(["ella,18,networking"])
     
+    print(writer)
+    
+import csv
+with open ("student.csv","r")  as file:
+    reader = csv.reader(file)   
+    
+    for row in reader:
+        print(row)
+"""
+
+          #JSON FILE
+          
+          
+ 
+ 
+"""         
+import json
+
+student = {
+    "name": "Emmanuel",
+    "age": 19,
+    "department": "Computer Science"
+}
+
+# Save the details
+with open("student.json", "w") as file:
+    json.dump(student, file, indent=4)
+
+# Read the details
+with open("student.json", "r") as file:
+    data = json.load(file)
+
+# Print specific details
+print(data["name"])
+print(data["department"])
+    
+
+
+      modules
+
+import math
+
+number = 144
+print(math.sqrt(number))
+print(math.pi)
+
+"""
+
+
 
 
 

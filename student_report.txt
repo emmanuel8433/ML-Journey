@@ -1,0 +1,5 @@
+STUDENT RESULT REPORT
+---------------------
+Name: emmanuel | Average: 80.00 | Grade: A
+Name: ella | Average: 89.67 | Grade: A
+Name: david | Average: 70.33 | Grade: A
